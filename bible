@@ -1,0 +1,5 @@
+alt + f9: action window
+cmd + j: duplicate layer
+f7: layers
+.sharpen: duplicate layer -> set blend mode to overlay/soft/hard, highpass filter(radius adjust), opacity
+
