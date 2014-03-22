@@ -1,0 +1,31 @@
+$gridle-generate-useful-states-classes  :  ( "retina" , "print" );
+
+// import gridle
+@import "gridle/sass/gridle/gridle";
+
+// setting up the grid
+$gridle-columns-count : 12;
+$gridle-gutter-width : 20px;
+// and many more options like...
+// $gridle-debug => display debug colors
+// $gridle-direction => support for ltr, rtl
+// etc...
+
+$small-width: 480px;
+$middle-width: 720px;
+
+// make the use of media queries really easy
+@include gridle_register_state ( 'mobile' , null , $small-width );
+@include gridle_register_state ( 'tablet' , null, $middle-width );
+
+// even with full custom queries :
+@include gridle_register_state ( 'land', '(orientation : landscape)' );
+
+// generate classes :
+@include gridle_generate_classes ( );
+
+// manage container width :
+.container {
+  max-width : 960px;
+  margin : 0 auto;
+}

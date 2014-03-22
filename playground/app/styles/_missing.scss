@@ -1,0 +1,22 @@
+.vcenter{
+  &:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -1em;
+  }
+  .vcenter-inner{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.vcenter2{
+  display: table;
+  .vcenter2-inner{
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+}
