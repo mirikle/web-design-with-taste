@@ -29,3 +29,13 @@ $middle-width: 720px;
   max-width : 960px;
   margin : 0 auto;
 }
+
+.grid-tablet-12, .grid-12{
+  margin: 30px 0;
+  &:first-child{
+    margin-top: 0;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+}

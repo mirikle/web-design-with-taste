@@ -8,23 +8,23 @@
 
 @font-face {
     font-family: 'circular';
-    src: url('/styles/fonts/circular.woff');
+    src: url('../fonts/circular.woff');
 }
 
 @font-face {
     font-family: 'circular';
-    src: url('/styles/fonts/circular-bold.woff');
+    src: url('../fonts/circular-bold.woff');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'thin';
-    src: url('/styles/fonts/thin.woff');
+    src: url('../fonts/thin.woff');
 }
 
 @font-face {
     font-family: 'thin';
-    src: url('/styles/fonts/thin-bold.woff');
+    src: url('../fonts/thin-bold.woff');
     font-weight: bold;
 }
 
@@ -46,6 +46,7 @@ html, body {
 
 h2{font-size: 120px;}
 h3{font-size: 75px;}
+h4{font-size: 45px;}
 a{
     text-decoration: none;
     color: black;
@@ -75,6 +76,9 @@ $hi-color: #DCA459;
         .right{
             float: right;
             .nav-list{
+                &.small{
+                    display: none;
+                }
                 li{
                     float: left;
                     a{
@@ -88,6 +92,12 @@ $hi-color: #DCA459;
                         }
                     }
                 }
+                @media (max-width: $middle-width){
+                    display: none;
+                    &.small.right{
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -96,7 +106,7 @@ $hi-color: #DCA459;
 .content-wrapper{
     background: #fff;
     .hero{
-        background: url('/images/services.jpg');
+        background: url('../images/services.jpg');
         background-size: cover;
         padding-top: 200px;
         color: #fff;
@@ -154,13 +164,33 @@ $hi-color: #DCA459;
     .section{
         text-align: center;
         padding: 80px 0;
+        &.bare{padding: 0;}
         color: darken($gray, 10%);
-        &.blue{
-            background: #E4EBED;
-        }
+        &.blue{ background: #E4EBED; }
+        &.gray{ background: #E8E8E8; }
         @media (max-width: $middle-width){
             .vcenter2-inner{
-                float: left;   
+                float: left;
+                &.float-right{
+                    display: block;
+                    float: right;
+                }
+            }
+        }
+        .button{
+            border: 2px solid white;
+            &.dark{border-color: #aaa;}
+            border-radius: 5px;
+            padding: 18px 20px;
+            width: 210px;
+            color: $gray*.6;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            &:hover{
+                color: black;
+                border-color: black;
             }
         }
         .content{
@@ -177,13 +207,49 @@ $hi-color: #DCA459;
                 text-transform: uppercase;
                 margin-bottom: 30px;
             }
+            h4{
+                margin-bottom: 20px;
+            }
             p{
                 font-size: 16px;
                 line-height: 1.68;
                 letter-spacing: 1px;
             }
         }
+        &.appraise{
+            .grid-12{
+                margin-bottom: 10px;
+            }
+            .summary{
+                margin-bottom: 40px;
+                img{
+                    width: 150px;
+                }
+            }
+            .avatar{
+                img{
+                    width: 75px;
+                    padding: 20px;
+                    border-radius: 100%;
+                }
+            }
+            .item{
+                margin-top: 40px;
+                p, .title{
+                    font-size: 15px;
+                }
+            }
+        }
     }
 }
 
+$black: #1E2222;
+$black-bg: #3C4544;
+.footer-wrapper{
+    background: $black;
+    color: $black-bg;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 15px;
+}
 

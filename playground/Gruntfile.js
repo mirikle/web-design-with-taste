@@ -307,7 +307,7 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'bower_components/**/*',
-            'images/{,*/}*.{webp}',
+            'images/{,*/}*.*',
             'fonts/*'
           ]
         }, {
@@ -338,7 +338,7 @@ module.exports = function (grunt) {
       dist: [
         'coffee',
         'compass:dist',
-        'imagemin',
+        // 'imagemin',
         'svgmin'
       ]
     },
@@ -419,7 +419,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'rev',
+    // 'rev',
     'usemin',
     'htmlmin'
   ]);
