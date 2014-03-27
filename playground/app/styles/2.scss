@@ -12,14 +12,13 @@
     padding: 0px;
     background-color: #000;
     color: #fff;
-    height: 700px;
     background: url("../images/2/firsttime.jpg") fixed center no-repeat;
     background-size: cover;
+    img{max-width: 100%;}
     &.sec1{
       background-image: url("../images/2/firsttime.jpg");
       text-align: center;
       padding: 80px;
-      img{max-width: 100%;}
       .logo{
         width: 80%;
         margin: 0 auto;
@@ -46,6 +45,23 @@
         }
       }
     }
+    &.sec2{
+      background-image: url("../images/2/lookingsofine.jpg");
+      .right{
+        background: #000;
+        margin-left: 60%;
+        font-size: 20px;
+        .text{
+          margin: 20px 0;
+        }
+        .lace{
+
+        }
+      }
+    }
+  }
+  .grid-inner{
+    padding: 30px;
   }
 }
 
